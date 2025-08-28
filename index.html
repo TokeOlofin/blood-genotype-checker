@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood & Genotype Compatibility Checker</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Compatibility Checker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Checkers</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#blood-section">Blood Group</a></li>
+              <li><a class="dropdown-item" href="#genotype-section">Genotype</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-danger text-white text-center p-5">
+    <h1 class="fw-bold">Blood & Genotype Compatibility Checker</h1>
+    <p>Quickly check transfusion and relationship compatibility.</p>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- Blood Group Section -->
+    <section id="blood-section" class="mb-5">
+      <h2 class="text-danger mb-3">Blood Group Compatibility</h2>
+      <div class="row g-3">
+        <div class="col-md-5">
+          <label for="donor" class="form-label">Donor Blood Group</label>
+          <select id="donor" class="form-select">
+            <option value="">--Select--</option>
+            <option>O-</option>
+            <option>O+</option>
+            <option>A-</option>
+            <option>A+</option>
+            <option>B-</option>
+            <option>B+</option>
+            <option>AB-</option>
+            <option>AB+</option>
+          </select>
+        </div>
+        <div class="col-md-5">
+          <label for="recipient" class="form-label">Recipient Blood Group</label>
+          <select id="recipient" class="form-select">
+            <option value="">--Select--</option>
+            <option>O-</option>
+            <option>O+</option>
+            <option>A-</option>
+            <option>A+</option>
+            <option>B-</option>
+            <option>B+</option>
+            <option>AB-</option>
+            <option>AB+</option>
+          </select>
+        </div>
+        <div class="col-md-2 d-grid">
+          <button class="btn btn-danger mt-4" onclick="checkBlood()">Check</button>
+        </div>
+      </div>
+      <div id="bloodResult" class="mt-3"></div>
+    </section>
+
+    <!-- Genotype Section -->
+    <section id="genotype-section" class="mb-5">
+      <h2 class="text-danger mb-3">Genotype Compatibility</h2>
+      <div class="row g-3">
+        <div class="col-md-5">
+          <label for="partner1" class="form-label">Partner 1 Genotype</label>
+          <select id="partner1" class="form-select">
+            <option value="">--Select--</option>
+            <option>AA</option>
+            <option>AS</option>
+            <option>SS</option>
+            <option>AC</option>
+            <option>SC</option>
+            <option>CC</option>
+          </select>
+        </div>
+        <div class="col-md-5">
+          <label for="partner2" class="form-label">Partner 2 Genotype</label>
+          <select id="partner2" class="form-select">
+            <option value="">--Select--</option>
+            <option>AA</option>
+            <option>AS</option>
+            <option>SS</option>
+            <option>AC</option>
+            <option>SC</option>
+            <option>CC</option>
+          </select>
+        </div>
+        <div class="col-md-2 d-grid">
+          <button class="btn btn-danger mt-4" onclick="checkGenotype()">Check</button>
+        </div>
+      </div>
+      <div id="genotypeResult" class="mt-3"></div>
+      <div class="text-center mt-4">
+      <button id="resetBtn" class="btn btn-secondary">Reset All</button>
+    </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="p-4 bg-light rounded">
+      <h3 class="text-danger">About This Tool</h3>
+      <p>This is a simple educational tool that helps students and couples quickly check compatibility for educational and awareness purposes only. 
+      Always consult a medical professional for real-life health decisions.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-danger text-white text-center p-3">
+    <small>© 2025 Compatibility Checker | Made with ❤️ by Olofin Oluwatoke Victoria</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
