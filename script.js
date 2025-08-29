@@ -59,12 +59,12 @@ function checkGenotype() {
     "CC": { "AA": "Low risk", "AS": "Risky", "SS": "High risk", "AC": "Risky", "SC": "High risk", "CC": "Not advised" }
   };
   const childrenProbabilities = {
-    "AA": { "AA": "100% AA", "AS": "50% AA / 50% AS", "SS": "100% AS", "AC": "50% AA / 50% AC", "SC": "50% AA / 50% SC", "CC": "100% AC" },
-    "AS": { "AA": "50% AA / 50% AS", "AS": "25% AA / 50% AS / 25% SS", "SS": "50% AS / 50% SS", "AC": "25% AA / 25% AS / 25% AC / 25% SC", "SC": "25% AS / 25% SC / 25% SS / 25% AC", "CC": "50% AC / 50% AS" },
-    "SS": { "AA": "100% AS", "AS": "50% AS / 50% SS", "SS": "100% SS", "AC": "50% AC / 50% SC", "SC": "50% SC / 50% SS", "CC": "50% CC / 50% SS" },
-    "AC": { "AA": "50% AA / 50% AC", "AS": "25% AA / 25% AS / 25% AC / 25% SC", "SS": "50% SC / 50% SS", "AC": "25% AA / 50% AC / 25% CC", "SC": "50% AC / 50% SC", "CC": "50% AC / 50% CC" },
-    "SC": { "AA": "50% AA / 50% SC", "AS": "25% AS / 25% SC / 25% SS / 25% AC", "SS": "50% SS / 50% SC", "AC": "50% AC / 50% SC", "SC": "50% SS / 50% CC", "CC": "50% CC / 50% SC" },
-    "CC": { "AA": "50% AC / 50% CC", "AS": "50% AC / 50% AS", "SS": "50% SS / 50% CC", "AC": "50% AC / 50% CC", "SC": "50% SC / 50% CC", "CC": "100% CC" }
+    "AA": { "AA": "100% AA", "AS": "50% AA / 50% AS", "SS": "100% AS", "AC": "50% AA / 50% AC", "SC": "50% AS / 50% AC", "CC": "100% AC" },
+    "AS": { "AA": "50% AA / 50% AS", "AS": "25% AA / 50% AS / 25% SS", "SS": "50% AS / 50% SS", "AC": "25% AA / 25% AS / 25% AC / 25% SC", "SC": "25% AS / 25% SC / 25% SS / 25% AC", "CC": "50% AC / 50% SC" },
+    "SS": { "AA": "100% AS", "AS": "50% AS / 50% SS", "SS": "100% SS", "AC": "50% AC / 50% SC", "SC": "50% SC / 50% SS", "CC": "100% SC" },
+    "AC": { "AA": "50% AA / 50% AC", "AS": "25% AA / 25% AS / 25% AC / 25% SC", "SS": "50% SC / 50% AS", "AC": "25% AA / 50% AC / 25% CC", "SC": "25% AC / 25% SC / 25% AS / 25% CC", "CC": "50% AC / 50% CC" },
+    "SC": { "AA": "50% AC / 50% AS", "AS": "25% AS / 25% SC / 25% SS / 25% AC", "SS": "50% SS / 50% SC", "AC": "25% AC / 25% SC / 25% CC / 25% AS", "SC": "25% SS / 25% CC / 50% SC", "CC": "50% CC / 50% SC" },
+    "CC": { "AA": "100% AC", "AS": "50% AC / 50% SC", "SS": "100% SC", "AC": "50% AC / 50% CC", "SC": "50% SC / 50% CC", "CC": "100% CC" }
   };
 
   let result = genotypeTable[p1][p2];
